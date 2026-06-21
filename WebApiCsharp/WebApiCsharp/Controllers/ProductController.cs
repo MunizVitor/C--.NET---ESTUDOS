@@ -30,6 +30,20 @@ namespace WebApiCsharp.Controllers
         }
 
         [HttpGet]
+        [Route("{id}/download")]
+        public IActionResult DownloadFoto(int id)
+        {
+            var product = _repository.GetId(id);
+            if (System.IO.File.Exists(product.foto))
+            {
+                var dataBytes = System.IO.File.ReadAllBytes(product.foto);
+                return File(dataBytes, "image/png");
+            }
+            return NotFound("Arquivo não encontrado");
+        }
+
+
+        [HttpGet]
         public IActionResult Get()
         {
             var products = _repository.Get();

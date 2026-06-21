@@ -6,5 +6,6 @@ namespace WebApiCsharp.Infraestrutura.Repository
     {
         void Add(Product  product);
         List<Product> Get();
+        Product? GetId(int id);
     }
 }

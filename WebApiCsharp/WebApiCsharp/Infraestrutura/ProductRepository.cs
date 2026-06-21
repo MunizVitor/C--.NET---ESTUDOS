@@ -17,5 +17,10 @@ namespace WebApiCsharp.Infraestrutura
         {
             return _context.Product.ToList();
         }
+
+        public Product? GetId(int id)
+        {
+            return _context.Product.Find(id);
+        }
     }
 }

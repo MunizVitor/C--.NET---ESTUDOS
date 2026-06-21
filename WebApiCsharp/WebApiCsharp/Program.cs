@@ -17,7 +17,7 @@ namespace WebApiCsharp
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddTransient<IFuncionarioRepository, FuncionarioRepository>();
+            builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
             var app = builder.Build();
 
