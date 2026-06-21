@@ -1,4 +1,7 @@
 
+using WebApiCsharp.Infraestrutura;
+using WebApiCsharp.Infraestrutura.Repository;
+
 namespace WebApiCsharp
 {
     public class Program
@@ -13,6 +16,8 @@ namespace WebApiCsharp
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddTransient<IFuncionarioRepository, FuncionarioRepository>();
 
             var app = builder.Build();
 
