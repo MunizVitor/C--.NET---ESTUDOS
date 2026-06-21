@@ -4,20 +4,20 @@ using System.Globalization;
 
 namespace WebApiCsharp.Model
 {
-    [Table("funcionarios")]
-    public class Funcionario
+    [Table("products")]
+    public class Product
     {
         [Key]
         public int id { get; set; }
         
         public string nome { get; set; } = string.Empty;
-        public int idade { get; set; } = 0;
+        public int quantidade { get; set; } = 0;
         public string? foto { get; set; } = string.Empty;
 
-        public Funcionario() { }
-        public Funcionario(string nome, int idade, string foto) {
+        public Product() { }
+        public Product(string nome, int quantidade, string foto) {
             this.nome = nome ?? throw new ArgumentNullException(nameof(nome));
-            this.idade = idade;
+            this.quantidade = quantidade;
             this.foto = foto;
         }
     }

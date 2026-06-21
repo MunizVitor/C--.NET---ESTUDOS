@@ -1,9 +1,9 @@
 ﻿namespace WebApiCsharp.ViewModel
 {
-    public class FuncionariosViewModel
+    public class ProductViewModel
     {
         public string Nome { get; set; }
-        public int Idade{ get; set; }
+        public int Quantidade{ get; set; }
 
         public IFormFile Foto { get; set; }
     }

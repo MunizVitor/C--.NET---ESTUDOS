@@ -5,7 +5,7 @@ namespace WebApiCsharp.Infraestrutura
 {
     public class ConnectionContext : DbContext
     {
-        public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<Product> Product { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseNpgsql(

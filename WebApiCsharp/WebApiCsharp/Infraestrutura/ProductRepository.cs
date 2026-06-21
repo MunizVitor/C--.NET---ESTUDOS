@@ -3,19 +3,19 @@ using WebApiCsharp.Model;
 
 namespace WebApiCsharp.Infraestrutura
 {
-    public class FuncionarioRepository : IFuncionarioRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly ConnectionContext _context = new ConnectionContext();
-        public void Add(Funcionario funcionario)
+        public void Add(Product product)
         {
             
-            _context.Funcionario.Add(funcionario);
+            _context.Product.Add(product);
             _context.SaveChanges();
         }
 
-        public List<Funcionario> Get()
+        public List<Product> Get()
         {
-            return _context.Funcionario.ToList();
+            return _context.Product.ToList();
         }
     }
 }
