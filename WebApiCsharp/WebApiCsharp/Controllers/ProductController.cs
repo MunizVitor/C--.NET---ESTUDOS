@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using WebApiCsharp.Infraestrutura.Repository;
+using WebApiCsharp.Infraestrutura;
 using WebApiCsharp.Model;
 using WebApiCsharp.ViewModel;
 

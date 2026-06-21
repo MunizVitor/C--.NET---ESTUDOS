@@ -1,6 +1,6 @@
 ﻿using WebApiCsharp.Model;
 
-namespace WebApiCsharp.Infraestrutura.Repository
+namespace WebApiCsharp.Infraestrutura
 {
     public interface IProductRepository
     {

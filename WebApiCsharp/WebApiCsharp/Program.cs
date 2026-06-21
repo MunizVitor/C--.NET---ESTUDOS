@@ -1,6 +1,5 @@
-
 using WebApiCsharp.Infraestrutura;
-using WebApiCsharp.Infraestrutura.Repository;
+using WebApiCsharp.Infraestrutura.UserRepository;
 
 namespace WebApiCsharp
 {
@@ -18,6 +17,7 @@ namespace WebApiCsharp
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddTransient<IProductRepository, ProductRepository>();
+            builder.Services.AddTransient<IUserRepository, UserRepository>();
 
             var app = builder.Build();
 

@@ -1,5 +1,4 @@
-﻿using WebApiCsharp.Infraestrutura.Repository;
-using WebApiCsharp.Model;
+﻿using WebApiCsharp.Model;
 
 namespace WebApiCsharp.Infraestrutura
 {
