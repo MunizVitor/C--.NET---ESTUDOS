@@ -18,9 +18,13 @@ namespace WebApiCsharp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(FuncionariosViewModel data)
+        public IActionResult Add([FromForm] FuncionariosViewModel data)
         {
-            var funcionario = new Funcionario(data.Nome, data.Idade, null);
+            var filePath = Path.Combine("Storage", data.Foto.FileName);
+            using Stream fileStream = new FileStream(filePath, FileMode.Create);
+            data.Foto.CopyTo(fileStream);
+
+            var funcionario = new Funcionario(data.Nome, data.Idade, filePath);
             _repository.Add(funcionario);
             return Ok();
         }

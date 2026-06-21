@@ -10,9 +10,9 @@ namespace WebApiCsharp.Model
         [Key]
         public int id { get; set; }
         
-        public string nome { get; set; }
-        public int idade { get; set; }
-        public string foto { get; set; }
+        public string nome { get; set; } = string.Empty;
+        public int idade { get; set; } = 0;
+        public string? foto { get; set; } = string.Empty;
 
         public Funcionario() { }
         public Funcionario(string nome, int idade, string foto) {
