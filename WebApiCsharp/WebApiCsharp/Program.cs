@@ -1,4 +1,4 @@
-using WebApiCsharp.Infraestrutura;
+using WebApiCsharp.Infraestrutura.RepositoryProduct;
 using WebApiCsharp.Infraestrutura.UserRepository;
 
 namespace WebApiCsharp

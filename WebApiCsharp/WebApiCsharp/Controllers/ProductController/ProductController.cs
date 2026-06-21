@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApiCsharp.Infraestrutura;
+using WebApiCsharp.Infraestrutura.RepositoryProduct;
 using WebApiCsharp.Model;
-using WebApiCsharp.ViewModel;
+using WebApiCsharp.ViewModel.ProductView;
 
-namespace WebApiCsharp.Controllers
+namespace WebApiCsharp.Controllers.ProductController
 {
     [ApiController]
     [Route("api/v1/products")]

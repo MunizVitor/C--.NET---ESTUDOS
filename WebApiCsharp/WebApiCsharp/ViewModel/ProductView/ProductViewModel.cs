@@ -1,4 +1,4 @@
-﻿namespace WebApiCsharp.ViewModel
+﻿namespace WebApiCsharp.ViewModel.ProductView
 {
     public class ProductViewModel
     {
