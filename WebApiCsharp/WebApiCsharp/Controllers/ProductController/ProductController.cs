@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApiCsharp.Infraestrutura.RepositoryProduct;
 using WebApiCsharp.Model;
 using WebApiCsharp.ViewModel.ProductView;
@@ -16,6 +17,7 @@ namespace WebApiCsharp.Controllers.ProductController
             _repository= productRepository ?? throw new ArgumentNullException();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromForm] ProductViewModel data)
         {
@@ -28,6 +30,7 @@ namespace WebApiCsharp.Controllers.ProductController
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id}/download")]
         public IActionResult DownloadFoto(int id)
@@ -41,7 +44,7 @@ namespace WebApiCsharp.Controllers.ProductController
             return NotFound("Arquivo não encontrado");
         }
 
-
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {

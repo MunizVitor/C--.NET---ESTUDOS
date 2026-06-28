@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApiCsharp.Infraestrutura.UserRepository;
 using WebApiCsharp.Model.User;
 using WebApiCsharp.ViewModel;
@@ -16,6 +17,7 @@ namespace WebApiCsharp.Controllers.UserController
             _repository = userRepository ?? throw new ArgumentNullException();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add(UserViewModel data)
         {
@@ -24,6 +26,7 @@ namespace WebApiCsharp.Controllers.UserController
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetById(int id)
@@ -32,6 +35,7 @@ namespace WebApiCsharp.Controllers.UserController
             return Ok(user);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
