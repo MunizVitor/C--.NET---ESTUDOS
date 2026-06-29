@@ -10,7 +10,7 @@ namespace WebApiCsharp.Controllers
         [HttpPost]
         public IActionResult Auth(string username, string password)
         {
-            if(username == "vitor " && password == "123") {
+            if(username == "vitor" && password == "123") {
                 var token = TokenService.GeneratedToken(new Model.User.User());
                 return Ok(token);
             }

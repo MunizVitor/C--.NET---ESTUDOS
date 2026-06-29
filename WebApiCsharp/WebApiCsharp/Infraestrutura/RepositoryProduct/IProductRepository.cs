@@ -1,4 +1,5 @@
-﻿using WebApiCsharp.Model;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using WebApiCsharp.Model;
 
 namespace WebApiCsharp.Infraestrutura.RepositoryProduct
 {
@@ -6,6 +7,7 @@ namespace WebApiCsharp.Infraestrutura.RepositoryProduct
     {
         void Add(Product  product);
         List<Product> Get();
+        List<Product> GetPaginacao(int pageNumber, int pageQuality);
         Product? GetId(int id);
     }
 }

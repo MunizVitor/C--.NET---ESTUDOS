@@ -21,5 +21,10 @@ namespace WebApiCsharp.Infraestrutura.RepositoryProduct
         {
             return _context.Product.Find(id);
         }
+
+        public List<Product> GetPaginacao(int pageNumber, int pageQuality)
+        {
+            return _context.Product.Skip(pageNumber * pageQuality).Take(pageQuality).ToList();
+        }
     }
 }
