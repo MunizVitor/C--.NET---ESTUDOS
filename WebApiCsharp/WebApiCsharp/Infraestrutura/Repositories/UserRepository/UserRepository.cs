@@ -16,10 +16,10 @@ namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
         {
             return _context.User.Select(b => new UserDTO()
             {
-                id = b.id,
-                nome = b.nome,
-                email = b.email,
-                cpf = b.cpf
+                id = b.Id,
+                nome = b.Nome,
+                email = b.Email,
+                cpf = b.Cpf
             }).ToList();
         }
 

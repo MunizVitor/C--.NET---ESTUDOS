@@ -1,4 +1,6 @@
-﻿using WebApiCsharp.Domain.ProductDomain.ProdutctModel;
+﻿
+
+using WebApiCsharp.Domain.ProductDomain.ProductModel;
 
 namespace WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct
 {
@@ -7,7 +9,6 @@ namespace WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct
         private readonly ConnectionContext _context = new ConnectionContext();
         public void Add(Product product)
         {
-            
             _context.Product.Add(product);
             _context.SaveChanges();
         }

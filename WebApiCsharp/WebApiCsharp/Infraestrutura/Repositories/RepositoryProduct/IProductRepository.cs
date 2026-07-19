@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using WebApiCsharp.Domain.ProductDomain.ProdutctModel;
+using WebApiCsharp.Domain.ProductDomain.ProductModel;
 
 namespace WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct
 {
