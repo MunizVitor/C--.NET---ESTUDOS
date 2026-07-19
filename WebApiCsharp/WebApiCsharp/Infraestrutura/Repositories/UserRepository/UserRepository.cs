@@ -1,4 +1,5 @@
-﻿using WebApiCsharp.Domain.UserDomain.UserModel;
+﻿using WebApiCsharp.Domain.Dtos;
+using WebApiCsharp.Domain.UserDomain.UserModel;
 
 namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
 {
@@ -11,9 +12,15 @@ namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
             _context.SaveChanges();
         }
 
-        public List<User> Get()
+        public List<UserDTO> Get()
         {
-            return _context.User.ToList();
+            return _context.User.Select(b => new UserDTO()
+            {
+                id = b.id,
+                nome = b.nome,
+                email = b.email,
+                cpf = b.cpf
+            }).ToList();
         }
 
         public User GetById(int id)

@@ -1,4 +1,5 @@
-﻿using WebApiCsharp.Domain.UserDomain.UserModel;
+﻿using WebApiCsharp.Domain.Dtos;
+using WebApiCsharp.Domain.UserDomain.UserModel;
 
 namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
 {
@@ -6,6 +7,6 @@ namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
     {
         void Add(User userModel);
         User GetById(int id);
-        List<User> Get();
+        List<UserDTO> Get();
     }
 }

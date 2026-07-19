@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 using WebApiCsharp.Aplication.ViewModel.UserView;
+using WebApiCsharp.Domain.UserDomain.UserModel;
 using WebApiCsharp.Infraestrutura.Repositories.UserRepository;
-using WebApiCsharp.Model.User;
 
 namespace WebApiCsharp.Controllers.UserController
 {
@@ -21,7 +22,7 @@ namespace WebApiCsharp.Controllers.UserController
         [HttpPost]
         public IActionResult Add(UserViewModel data)
         {
-            var user = new User(data.Nome, data.Email, data.Cpf);
+            var user = new User(data.Nome, data.Email, data.Cpf, data.Idade, data.Password);
             _repository.Add(user);
             return Ok();
         }
