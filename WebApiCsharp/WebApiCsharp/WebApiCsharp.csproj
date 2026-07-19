@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Aplication\" />
     <Folder Include="Storage\" />
   </ItemGroup>
 

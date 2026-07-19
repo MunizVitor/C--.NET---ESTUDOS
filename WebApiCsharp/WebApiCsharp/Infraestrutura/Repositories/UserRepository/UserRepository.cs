@@ -1,6 +1,6 @@
-﻿using WebApiCsharp.Model.User;
+﻿using WebApiCsharp.Domain.UserDomain.UserModel;
 
-namespace WebApiCsharp.Infraestrutura.UserRepository
+namespace WebApiCsharp.Infraestrutura.Repositories.UserRepository
 {
     public class UserRepository : IUserRepository
     {

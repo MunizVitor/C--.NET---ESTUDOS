@@ -1,4 +1,4 @@
-﻿namespace WebApiCsharp.ViewModel
+﻿namespace WebApiCsharp.Aplication.ViewModel.UserView
 {
     public class UserViewModel
     {

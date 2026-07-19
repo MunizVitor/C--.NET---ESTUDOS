@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using WebApiCsharp.Model;
+using WebApiCsharp.Domain.ProductDomain.ProdutctModel;
 
-namespace WebApiCsharp.Infraestrutura.RepositoryProduct
+namespace WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct
 {
     public interface IProductRepository
     {

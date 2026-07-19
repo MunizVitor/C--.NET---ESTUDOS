@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApiCsharp.Model.User
+namespace WebApiCsharp.Domain.UserDomain.UserModel
 {
     [Table("users")]
     public class User

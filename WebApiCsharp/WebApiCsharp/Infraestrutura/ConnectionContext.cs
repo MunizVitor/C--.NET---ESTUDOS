@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApiCsharp.Model;
-using WebApiCsharp.Model.User;
+using WebApiCsharp.Domain.ProductDomain.ProdutctModel;
+using WebApiCsharp.Domain.UserDomain.UserModel;
 
 namespace WebApiCsharp.Infraestrutura
 {

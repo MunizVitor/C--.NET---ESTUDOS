@@ -2,7 +2,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using WebApiCsharp.Model.User;
+using WebApiCsharp.Domain.UserDomain.UserModel;
 
 namespace WebApiCsharp.Services
 {

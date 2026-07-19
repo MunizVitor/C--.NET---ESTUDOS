@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using WebApiCsharp.Infraestrutura.UserRepository;
+using WebApiCsharp.Aplication.ViewModel.UserView;
+using WebApiCsharp.Infraestrutura.Repositories.UserRepository;
 using WebApiCsharp.Model.User;
-using WebApiCsharp.ViewModel;
 
 namespace WebApiCsharp.Controllers.UserController
 {

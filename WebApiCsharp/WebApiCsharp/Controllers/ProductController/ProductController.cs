@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.NetworkInformation;
-using WebApiCsharp.Infraestrutura.RepositoryProduct;
+using WebApiCsharp.Aplication.ViewModel.ProductView;
+using WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct;
 using WebApiCsharp.Model;
-using WebApiCsharp.ViewModel.ProductView;
 
 namespace WebApiCsharp.Controllers.ProductController
 {

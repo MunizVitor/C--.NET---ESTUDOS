@@ -4,8 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using WebApiCsharp.Infraestrutura;
-using WebApiCsharp.Infraestrutura.RepositoryProduct;
-using WebApiCsharp.Infraestrutura.UserRepository;
+using WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct;
+using WebApiCsharp.Infraestrutura.Repositories.UserRepository;
 
 namespace WebApiCsharp
 {

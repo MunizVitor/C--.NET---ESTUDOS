@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 
-namespace WebApiCsharp.Model
+namespace WebApiCsharp.Domain.ProductDomain.ProdutctModel
 {
     [Table("products")]
     public class Product
