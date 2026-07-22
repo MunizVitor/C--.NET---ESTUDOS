@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using WebApiCsharp.Aplication.Mapping;
 using WebApiCsharp.Infraestrutura;
 using WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct;
 using WebApiCsharp.Infraestrutura.Repositories.UserRepository;
@@ -21,6 +22,7 @@ namespace WebApiCsharp
 
             // Add services to the container.
             builder.Services.AddControllers();
+            builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen( c =>
             {
