@@ -9,11 +9,14 @@ namespace WebApiCsharp.Infraestrutura
         public DbSet<Product> Product { get; set; }
         public DbSet<User> User{ get; set; }
 
+        public ConnectionContext(DbContextOptions<ConnectionContext> options) : base(options)
+        {
+            if (Database.GetPendingMigrations().Any())
+                Database.Migrate();
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql(
-          "Server=localhost;" +
-          "Port=5432;Database=webapi_Csharp;" +
-          "User Id=postgres;" +
-          "Password=admin;");
+            => optionsBuilder.UseMySQL(
+                "Server=localhost;Port=3306;Database=webapi_csharp;User=root;Password=admin;"
+            );
     }
 }

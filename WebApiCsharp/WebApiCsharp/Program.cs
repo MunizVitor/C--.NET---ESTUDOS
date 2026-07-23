@@ -56,7 +56,9 @@ namespace WebApiCsharp
             });
 
             // Registrar DbContext
-            builder.Services.AddDbContext<ConnectionContext>();
+            builder.Services.AddDbContext<ConnectionContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             // Registrar repositórios
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
