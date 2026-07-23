@@ -5,10 +5,11 @@ using WebApiCsharp.Aplication.ViewModel.UserView;
 using WebApiCsharp.Domain.UserDomain.UserModel;
 using WebApiCsharp.Infraestrutura.Repositories.UserRepository;
 
-namespace WebApiCsharp.Controllers.UserController
+namespace WebApiCsharp.Controllers.v1.UserController
 {
     [ApiController]
-    [Route("api/v1/users")]
+    [Route("api/v{version:apiVersion}/users")]
+    [ApiVersion("1.0")]
     public class UserController : Controller
     {
         private readonly IUserRepository _repository;

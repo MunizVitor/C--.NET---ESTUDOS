@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net.NetworkInformation;
 using WebApiCsharp.Aplication.ViewModel.ProductView;
+using WebApiCsharp.Domain.ProductDomain.ProductModel;
 using WebApiCsharp.Infraestrutura.Repositories.RepositoryProduct;
-using WebApiCsharp.Model;
 
-namespace WebApiCsharp.Controllers.ProductController
+namespace WebApiCsharp.Controllers.v1.ProductController
 {
     [ApiController]
-    [Route("api/v1/products")]
+    [Route("api/v{version:apiVersion}/products")]
+    [ApiVersion("1.0")]
     public class ProductController : Controller
     {
         private readonly IProductRepository _repository;
